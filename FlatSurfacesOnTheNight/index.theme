@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=FlatSurfacesOnTheNight
+Type=X-GNOME-Metatheme
+Comment=A Flat-surfaces looking theme (dark edition)
+Encoding=UTF-8
+GtkTheme=FlatSurfacesOnTheNight
+MetacityTheme=FlatSurfaces
+IconTheme=gnome
+ButtonLayout=menu:minimize,maximize,close
