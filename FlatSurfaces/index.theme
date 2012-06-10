@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=FlatSurfaces
+Type=X-GNOME-Metatheme
+Comment=A Flat-surfaces looking theme
+Encoding=UTF-8
+GtkTheme=FlatSurfaces
+MetacityTheme=FlatSurfaces
+IconTheme=gnome
+ButtonLayout=menu:minimize,maximize,close
