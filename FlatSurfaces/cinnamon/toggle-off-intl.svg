@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <rect x="2" y="2" width="60" height="18" fill="#313131" stroke="#fcfcfc" stroke-width="2px"/>
+ <path d="m47 6c-2.7614 0-5 2.2386-5 5s2.2386 5 5 5 5-2.2386 5-5-2.2386-5-5-5zm0 2c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3-3-1.3431-3-3 1.3431-3 3-3z" fill="#fcfcfc"/>
+ <rect x="2" y="2" width="30" height="18" fill="#1a1a1a" stroke="#fcfcfc" stroke-width="2px"/>
+</svg>
