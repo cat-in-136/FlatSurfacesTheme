@@ -609,7 +609,8 @@ StScrollBar StButton#vhandle:hover {
     spacing-columns: 10px;
     margin-from-right-edge-of-screen: 20px;
     width: 34em;
-    color: white;
+    background-color: #1a1a1a;
+    color: #fcfcfc;
 }
 #notification.multi-line-notification {
     padding-bottom: 8px;
