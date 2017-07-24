@@ -1,6 +1,7 @@
-FlatSurfaces 0.0
+FlatSurfaces 0.2
 ================
-Files: FlatSurfaces/gtk-2.0/*
+Files: cinnamon/*
+       FlatSurfaces/gtk-2.0/*
        FlatSurfaces/gtk-3.0/*
        FlatSurfaces/metacity-1/*
        FlatSurfaces/xfwm4/*

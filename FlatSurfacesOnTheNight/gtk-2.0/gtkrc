@@ -2,19 +2,16 @@ gtk-color-scheme = "base_color:#121212\nbg_color:#1a1a1a\ntooltip_bg_color:#3434
 
 style "default"
 {
-engine "hcengine"
-{
-	edge_thickness = 1
-}
-
-	GtkWidget::link-color		= @link_color
-	GtkWidget::visited-link-color	= @visited_link_color
+	engine "hcengine"
+	{
+		edge_thickness = 1
+	}
 
 	xthickness = 1
 	ythickness = 1
 
 	bg[NORMAL]		= @bg_color
-	bg[PRELIGHT]		= shade(1.02, @bg_color)
+	bg[PRELIGHT]		= shade(1.2, @bg_color)
 	bg[SELECTED]		= @selected_bg_color
 	bg[ACTIVE]		= shade(0.89, @bg_color)
 	bg[INSENSITIVE]		= @bg_color
@@ -24,7 +21,7 @@ engine "hcengine"
 	fg[ACTIVE]		= @fg_color
 	fg[INSENSITIVE]		= mix(0.5, @fg_color, @base_color)
 	base[NORMAL]		= @base_color
-	base[PRELIGHT]		= shade(1.02, @base_color)
+	base[PRELIGHT]		= shade(1.2, @base_color)
 	base[SELECTED]		= @selected_bg_color
 	base[ACTIVE]		= shade(0.89, @base_color)
 	base[INSENSITIVE]	= @base_color
@@ -35,6 +32,15 @@ engine "hcengine"
 	text[INSENSITIVE]	= shade(1.5, @text_color)
 }
 class "GtkWidget" style "default"
+
+style "togglebutton"
+{
+	bg[ACTIVE]		= @selected_bg_color
+	fg[ACTIVE]		= @selected_fg_color
+}
+widget_class "*.<GtkToggleButton>*" style "togglebutton"
+widget_class "*.<GtkRadioButton>.<GtkLabel>"  style "default"
+widget_class "*.<GtkCheckButton>.<GtkLabel>"  style "default"
 
 style "tooltips"
 {
