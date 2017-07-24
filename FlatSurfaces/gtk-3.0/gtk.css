@@ -498,3 +498,11 @@ GtkInfoBar, infobar {
   background-color: @error_bg_color;
   color: @error_fg_color;
 }
+
+
+/* App-specific rule */
+.budgie-panel {
+  background-color: @bg_color;
+  color: @fg_color;
+}
+
