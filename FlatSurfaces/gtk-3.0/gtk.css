@@ -416,6 +416,14 @@ GtkProgressBar.progressbar, progressbar progress,
   background-color: @fg_color;
 }
 
+scrolledwindow > viewport > :last-child {
+  background-color: transparent;
+}
+scrolledwindow > .frame, scrolledwindow > .view {
+  border-width: 1px;
+  border-style: solid;
+}
+
 GtkFrame, frame > border, .csd, .header-bar, headerbar {
   border-width: 1px;
   border-style: solid;
