@@ -227,10 +227,12 @@ actionbar button, actionbar button:insensitive,
   background-color: @base_color;
   color: @text_color;
 }
-.view:insensitive, textview:insensitive {
+.view:insensitive, iconview:insensitive, textview:insensitive,
+list:insensitive, treeview:insensitive {
   background-color: @bg_color;
 }
 
+.view:selected, iconview:selected,
 text selection, entry selection, label selection {
   background-color: @selected_bg_color;
   color: @selected_fg_color;
