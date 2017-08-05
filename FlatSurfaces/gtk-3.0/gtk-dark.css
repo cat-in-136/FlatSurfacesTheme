@@ -1,0 +1,24 @@
+@define-color base_color    #121212;
+@define-color bg_color      #1a1a1a;
+@define-color tooltip_bg_color    #343434;
+@define-color selected_bg_color   #1e90ff;
+@define-color text_color    #fcfcfc;
+@define-color fg_color      #ffffff;
+@define-color tooltip_fg_color    #ffffff;
+@define-color selected_fg_color   #1a1a1a;
+@define-color link_color          #00ffff;
+@define-color visited_link_color  #ff00ff;
+
+@define-color prelight_bg_color shade(@bg_color, 2.0);
+@define-color insensitive_fg_color mix(@fg_color, @base_color, 0.5);
+
+@define-color info_fg_color   #8b6914;
+@define-color info_bg_color   #8b6914;
+@define-color warning_fg_color    #8b3d14;
+@define-color warning_bg_color    #8b3d14;
+@define-color question_fg_color   #0057ab;
+@define-color question_bg_color   #0057ab;
+@define-color error_fg_color    #c90000;
+@define-color error_bg_color    #c90000;
+
+@import url("gtk-widgets.css");
