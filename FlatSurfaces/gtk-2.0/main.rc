@@ -1,0 +1,181 @@
+style "default"
+{
+	engine "hcengine"
+	{
+		edge_thickness = 1
+	}
+
+	xthickness = 1
+	ythickness = 1
+
+	bg[NORMAL]		= @bg_color
+	bg[PRELIGHT]		= shade(1.2, @bg_color)
+	bg[SELECTED]		= @selected_bg_color
+	bg[ACTIVE]		= shade(0.89, @bg_color)
+	bg[INSENSITIVE]		= @bg_color
+	fg[NORMAL]		= @fg_color
+	fg[PRELIGHT]		= @fg_color
+	fg[SELECTED]		= @selected_fg_color
+	fg[ACTIVE]		= @fg_color
+	fg[INSENSITIVE]		= mix(0.5, @fg_color, @base_color)
+	base[NORMAL]		= @base_color
+	base[PRELIGHT]		= shade(1.2, @base_color)
+	base[SELECTED]		= @selected_bg_color
+	base[ACTIVE]		= shade(0.89, @base_color)
+	base[INSENSITIVE]	= @base_color
+	text[NORMAL]		= @text_color
+	text[PRELIGHT]		= @text_color
+	text[SELECTED]		= @selected_fg_color
+	text[ACTIVE]		= @text_color
+	text[INSENSITIVE]	= shade(1.5, @text_color)
+}
+class "GtkWidget" style "default"
+
+style "togglebutton"
+{
+	bg[ACTIVE]		= @selected_bg_color
+	fg[ACTIVE]		= @selected_fg_color
+}
+widget_class "*.<GtkToggleButton>*" style "togglebutton"
+widget_class "*.<GtkRadioButton>.<GtkLabel>"  style "default"
+widget_class "*.<GtkCheckButton>.<GtkLabel>"  style "default"
+
+style "tooltips"
+{
+	xthickness	= 8
+	ythickness	= 4
+
+	bg[NORMAL]	= @tooltip_bg_color
+	fg[NORMAL]	= @tooltip_fg_color
+}
+widget "gtk-tooltip*" style "tooltips"
+
+style "view"
+{
+	bg[NORMAL]		= @base_color
+}
+widget_class "*<GtkListItem>*" style "view"
+
+style "menuitem"
+{
+	bg[NORMAL]		= @bg_color
+	fg[NORMAL]		= @fg_color
+	base[NORMAL]		= @base_color
+	text[NORMAL]		= @text_color
+
+	bg[PRELIGHT]		= @selected_bg_color
+	base[PRELIGHT]		= @selected_bg_color
+	fg[PRELIGHT]		= @selected_fg_color
+	text[PRELIGHT]		= @selected_fg_color
+}
+widget_class "*Item*Label*" style "menuitem"
+widget_class "*<GtkMenuItem>*" style "menuitem"
+
+style "menu_and_tool_bar"
+{
+	xthickness = 0
+	ythickness = 0
+	engine "pixmap" {
+		image {
+			function = RESIZE_GRIP
+			recolorable = TRUE
+		}
+	}
+}
+class "GtkMenuBar" style "menu_and_tool_bar"
+class "GtkToolbar" style "menu_and_tool_bar"
+class "GtkStatusbar" style "menu_and_tool_bar"
+widget_class "*<GtkStatusbar>*<GtkWidget>*" style "menu_and_tool_bar"
+
+style "handlebox"
+{
+	bg[NORMAL]		= @bg_color
+	fg[NORMAL]		= @bg_color
+
+	xthickness = 0
+	ythickness = 0
+
+	engine "pixmap" {
+		image {
+			function = HANDLE
+			recolorable = TRUE
+		}
+	}
+}
+class "GtkHandleBox" style "handlebox"
+
+style "entry"
+{
+	xthickness = 3
+	ythickness = 3
+}
+class "GtkEntry" style "entry"
+
+style "scale"
+{
+	xthickness = 0
+	ythickness = 0
+
+	bg[ACTIVE]	= mix(0.8, @bg_color, @fg_color)
+}
+class "GtkScale" style "scale"
+class "GtkVScale" style "scale"
+class "GtkHScale" style "scale"
+
+style "notebook"
+{
+	bg[ACTIVE]	= mix(0.9, @bg_color, @fg_color)
+	bg[NORMAL]	= @bg_color
+}
+class "GtkNotebook" style "notebook"
+
+style "scrollbar" = "scale"
+{
+	GtkRange::trough-border = 0
+}
+class "GtkScrollbar" style "scrollbar"
+
+style "progressbar"
+{
+	fg[PRELIGHT]	= @selected_fg_color
+	bg[PRELIGHT]	= @selected_bg_color
+}
+class "GtkProgress" style "progressbar"
+
+style "paned"
+{
+	xthickness = 0
+	ythickness = 0
+
+	bg[NORMAL]	= @fg_color
+	fg[NORMAL]	= @fg_color
+}
+class "GtkPaned" style "paned"
+
+style "separator"
+{
+	xthickness = 2
+	ythickness = 2
+}
+class "GtkSeparator" style "separator"
+class "GtkSeparatorMenuItem" style "separator"
+class "GtkSeparatorToolItem" style "separator"
+
+style "palette_group"
+{
+	fg[NORMAL]	= @fg_color
+	fg[PRELIGHT]	= @fg_color
+}
+widget_class "*<GtkToolPalette>*<GtkToolItemGroup>*<GtkWidget>" style "palette_group"
+
+style "panel"
+{
+	fg[NORMAL]		= @fg_color
+	fg[PRELIGHT]		= @fg_color
+	fg[SELECTED]		= @fg_color
+	fg[ACTIVE]		= @fg_color
+	fg[INSENSITIVE]		= mix(0.5, @fg_color, @base_color)
+}
+widget "*PanelWidget*" style "panel"
+widget "*PanelApplet*" style "panel"
+widget_class "XfcePanel*" style "panel"
