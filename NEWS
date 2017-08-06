@@ -1,0 +1,21 @@
+* Sun Aug 06 2017 cat_in_136 - v0.4
+
+- Introduce darker theme
+- Unify FlatSurfacesOnTheNight variant theme
+
+* Fri Jul 28 2017 cat_in_136 - v0.3
+
+- Fix a bug of cinnamon notifications visibility
+- Fix a bug of icon invisibility on the budgie panel
+- Fix viewport appearance
+- Fix a bug where the selection on iconview does not painted with selection color.
+
+* Mon Jul 17 2017 cat_in_136 - v0.2
+- Updated for GTK+3.22, GTK+3.18;
+- Introduce Cinnamon Desktop Theme (Cinnamon v3.4)
+
+* Sun Jun 10 2012 cat_in_136 - v0.1
+- updated for GTK+3.4
+
+* Mon Jan 2 2012 cat_in_136 - v0.0
+- initial release.
