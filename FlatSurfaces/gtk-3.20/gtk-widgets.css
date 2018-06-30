@@ -1,0 +1,493 @@
+* {
+  padding: 1px;
+
+  -GtkStatusbar-has-resize-grip: false;
+  -GtkWindow-resize-grip-height: 0;
+  -GtkWindow-resize-grip-width: 0;
+
+  -GtkWidget-link-color: @link_color;
+  -GtkWidget-visited-link-color: @visited_link_color;
+
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false;
+
+  color: @fg_color;
+  background-color: transparent;
+  border-color: @fg_color;
+  border-style: none;
+}
+
+*:selected,
+*:selected:focused {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+*:insensitive, *:insensitive * {
+  color: @insensitive_fg_color;
+  border-color: @insensitive_fg_color;
+}
+
+.background {
+  background-color: @bg_color;
+  color: @fg_color;
+}
+
+.tooltip, .tooltip *, tooltip {
+  padding: 4px 4px;
+  background-color: @tooltip_bg_color;
+  color: @tooltip_fg_color;
+  border-width: 1px;
+  border-style: solid;
+}
+
+button, .button,
+radio, .radio,
+check, .check {
+  border-style: solid;
+  border-width: 1px;
+}
+check:checked {
+  -gtk-icon-source: -gtk-icontheme("object-select-symbolic");
+}
+radio {
+  border-radius: 100%;
+}
+radio:checked {
+  -gtk-icon-source: -gtk-icontheme("media-record-symbolic");
+}
+button:prelight:active, .button:prelight:active,
+button:hover, .button:hover,
+radio:prelight, .radio:prelight,
+radio:hover, .radio:hover,
+check:prelight, .check:prelight,
+check:hover, .check:hover {
+  background-color: @prelight_bg_color;
+  color: @fg_color;
+}
+button:active, .button:active,
+button:hover:active, .button:hover:active,
+button:focus:hover:active, .button:focus:hover:active {
+  background-color: mix(@fg_color, @bg_color, 0.9);
+  color: @fg_color;
+}
+button.toggle:checked, button.radio:checked,
+button.toggle:checked > label, button.radio:checked > label,
+button.toggle:checked > box > label, button.radio:checked > box > label,
+button.toggle:checked > image, button.radio:checked > image {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+button.flat,
+button:link,
+modalbutton {
+  border-color: transparent;
+}
+button.flat:active, button.flat:hover,
+button:link:active, button:link:hover {
+  border-color: @fg_color;
+}
+
+*:link, .link, button:link > label {
+  color: @link_color;
+  text-decoration: underline;
+  text‑decoration‑style: solid;
+}
+*:visited, .link:visited, button:visited > label {
+  color: @visited_link_color;
+  text-decoration: underline;
+  text‑decoration‑style: solid;
+}
+
+GtkSwitch, switch {
+  padding: 2px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: mix(@fg_color, @bg_color, 0.9);
+  color: @fg_color;
+}
+GtkSwitch.trough:active, switch:checked {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+GtkMenu, menu {
+  border-style: solid;
+  border-width: 1px;
+}
+.menuitem:active, .menuitem GtkLabel:active, menuitem:active, menuitem:active > label,
+.menuitem:prelight, .menuitem GtkLabel:prelight, menuitem:prelight, menuitem:prelight > label,
+.menu:active, .menu GtkLabel:active, menu:active,
+.menu:prelight, .menu GtkLabel:prelight, menu:prelight,
+GtkTreeMenu .menuitem:prelight,
+GtkTreeMenu .menuitem *:prelight,
+GtkTreeMenu .menuitem:active,
+GtkTreeMenu .menuitem *:active,
+.popover GtkModelButton.button:prelight,
+.popover GtkModelButton.button *:prelight,
+.popover GtkModelButton.button:active,
+.popover GtkModelButton.button *:active,
+popover modelbutton:prelight,
+popover modelbutton *:prelight,
+popover modelbutton:active,
+popover modelbutton *:active {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+menuitem check, menuitem radio {
+  min-width: 14px;
+  min-height: 14px;
+}
+menuitem arrow {
+  min-height: 14px;
+  min-width: 14px;
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+menuitem arrow:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+.menuitem.check:active, menuitem check:active, 
+.menuitem.radio:active, menuitem radio:active {
+  background-color: @bg_color;
+  color: @fg_color;
+}
+.menuitem.check:prelight, .menuitem.check:hover, menuitem check:prelight, menuitem check:hover,
+.menuitem.radio:prelight, .menuitem.radio:hover, menuitem radio:prelight, menuitem radio:hover {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+  border-color: @selected_fg_color;
+}
+.menuitem:insensitive, .menuitem GtkLabel:insensitive, menuitem:insensitive,
+.menu:insensitive, .menu GtkLabel:insensitive, menu:insensitive,
+GtkTreeMenu:insensitive {
+  color: @insensitive_fg_color;
+}
+
+.menubar, menubar,
+.toolbar, toolbar,
+GtkStatusbar, statusbar, GtkStatusbar *, statusbar *,
+.action-bar, actionbar,
+.header-bar, headerbar {
+  background-color: @bg_color;
+  border-width: 0;
+}
+
+.popover, .popover.background, popover, popover.background {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.toolbar .button, toolbar button, .toolbar .button:insensitive, toolbar button:insensitive,
+actionbar button, actionbar button:insensitive,
+.header-bar .button, headerbar button, .header-bar .button:insensitive, headerbar button:insensitive {
+  border-color: transparent;
+}
+
+.toolbar .button:hover, toolbar button:hover, .toolbar .button:active, toolbar button:active,
+.action-bar .button:hover, actionbar button:hover, .action-bar .button:active, actionbar button:active,
+.header-bar .button:hover, headerbar button:hover, .header-bar .button:active, headerbar button:active {
+  border-color: @fg_color;
+}
+
+.entry, entry,
+.toolbar .entry, toolbar entry {
+  background-color: @base_color;
+  color: @text_color;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+}
+
+.view, textview {
+  background-color: @base_color;
+  color: @text_color;
+}
+.view:insensitive, iconview:insensitive, textview:insensitive,
+list:insensitive, treeview:insensitive {
+  background-color: @bg_color;
+}
+
+.view:selected, iconview:selected,
+text selection, entry selection, label selection {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+.rubberband, rubberband {
+  border-width: 1px;
+  border-style: solid;
+  border-color: @selected_bg_color;
+  background-color: alpha(@selected_bg_color, 0.5);
+}
+
+combobox arrow {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  min-width: 16px;
+  min-height: 16px;
+  color: @fg_color;
+}
+
+.scrollbar, scrollbar {
+  -GtkRange-trough-border: 0;
+
+  padding: 0;
+  background-color: mix(@fg_color, @bg_color, 0.8);
+  border-width: 1px;
+  border-style: solid;
+}
+.scrollbar .button, scrollbar button {
+  border: none;
+}
+scrollbar contents, scrollbar trough {
+  margin: 0;
+  padding: 0;
+}
+scrollbar trough > slider {
+  margin: -1px;
+}
+.scrollbar.slider.horizontal, scrollbar.horizontal trough > slider {
+  min-width: 40px;
+}
+.scrollbar.slider.vertical, scrollbar.vertical trough > slider {
+  min-height: 40px;
+}
+
+GtkScale, .scale, scale {
+  min-height: 15px;
+  min-width: 15px;
+  padding: 3px;
+}
+scale.horizontal trough {
+  padding: 0 4px;
+}
+scale.horizontal trough > highlight, scale.horizontal trough > fill {
+  margin: 0 -4px;
+}
+scale.vertical trough {
+  padding: 4px 0;
+}
+scale.vertical trough > highlight, scale.vertical trough > fill {
+  margin: -4px 0;
+}
+.scale.trough, scale trough {
+  background-color: mix(@fg_color, @bg_color, 0.8);
+  border-width: 1px;
+  border-style: solid;
+}
+.scale.slider, scale trough > slider {
+  min-height: 15px;
+  min-width: 15px;
+  margin: -6px;
+}
+.scale.trough.highlight, scale trough > highlight {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+.scale.mark.separator, scale indicator {
+  color: @fg_color;
+}
+.scale.mark.separator.horizontal, scale.horizontal indicator {
+  min-width: 1px;
+  min-height: 4px;
+}
+.scale.mark.separator.vertical, scale.vertical indicator {
+  min-width: 4px;
+  min-height: 1px;
+}
+
+.scrollbar:insensitive, scrollbar:insensitive,
+GtkScale.entry {
+  color: mix(@fg_color, @base_color, 0.5);
+  border-color: mix(@fg_color, @base_color, 0.5);
+}
+
+.scrollbar.slider, slider {
+  min-width: 5px;
+  min-height: 5px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: @bg_color;
+  color: @fg_color;
+}
+.scrollbar.slider.horizontal, .horizontal slider {
+  height: 100%;
+}
+.scrollbar.slider.vertical, .vertical slider {
+  width: 100%;
+}
+.scrollbar.slider:hover, slider:hover, .scrollbar.slider:prelight, slider:prelight,
+GtkSwitch:prelight, switch:prelight > slider, GtkSwitch:hover, switch:hover > slider {
+  background-color: @prelight_bg_color;
+  color: @prelight_fg_color;
+}
+
+.notebook, notebook > header > tabs > tab, notebook > stack {
+  border-width: 1px;
+  border-style: solid;
+}
+notebook, notebook > header, notebook > header > tabs {
+  padding: 0;
+}
+.notebook tab, notebook tab, notebook tab * {
+  background-color: mix(@fg_color, @bg_color, 0.9);
+}
+.notebook tab:active, .notebook tab:hover, notebook tab:checked, notebook tab:checked *, notebook tab:hover, notebook tab:hover * {
+  background-color: @bg_color;
+}
+notebook > header.top > tabs > tab {
+  margin: 0 1px -1px 1px;
+}
+notebook > header.top > tabs > tab:checked {
+  border-bottom-color: @bg_color;
+}
+notebook > header.bottom > tabs > tab {
+  margin: -1px 1px 0 1px;
+}
+notebook > header.bottom > tabs > tab:checked {
+  border-top-color: @bg_color;
+}
+notebook > header.right > tabs > tab {
+  margin: 1px 0 1px -1px;
+}
+notebook > header.right > tabs > tab:checked {
+  border-left-color: @bg_color;
+}
+notebook > header.left > tabs > tab {
+  margin: 1px -1px 1px 0;
+}
+notebook > header.left > tabs > tab:checked {
+  border-right-color: @bg_color;
+}
+.notebook tab .button, notebook tab button {
+  border-color: transparent;
+}
+.notebook tab .button:active, notebook tab button:active, .notebook tab .button:hover, notebook tab button:hover {
+  border-color: @fg_color;
+}
+
+GtkProgressBar, progressbar {
+  border-width: 1px;
+  border-style: solid;
+}
+GtkProgressBar.progressbar, progressbar progress,
+.entry.progressbar, .view .progressbar {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.paned, paned {
+  background-color: @bg_color;
+}
+.paned:hover, paned:hover,
+.paned:prelight, paned:prelight,
+.paned:selected, paned:selected {
+  background-color: @fg_color;
+}
+
+.pane-separator, paned separator,
+.pane-separator:hover, paned separator:hover,
+.pane-separator:prelight, paned separator:prelight,
+.pane-separator:selected, paned separator:selected {
+  background-color: @fg_color;
+}
+
+scrolledwindow > viewport > :last-child {
+  background-color: transparent;
+}
+scrolledwindow > .frame, scrolledwindow > .view {
+  border-width: 1px;
+  border-style: solid;
+}
+
+GtkFrame, frame > border, .csd, .header-bar, headerbar {
+  border-width: 1px;
+  border-style: solid;
+}
+.header-bar, headerbar {
+  border-bottom-width: 0;
+}
+
+.grip {
+}
+
+.separator, .menu.separator, menu separator {
+  background-color: @fg_color;
+}
+
+@keyframes spin {
+  to { -gtk-icon-transform: rotate(1turn); }
+}
+spinner {
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+}
+spinner:checked {
+  animation: spin 1s linear infinite;
+}
+
+row {
+}
+.cell {
+}
+column-header {
+}
+column-header .button {
+  background-color: @bg_color;
+  border-width: 1px 1px 1px 0px;
+}
+column-header:first-child .button {
+  border-width: 1px 1px 1px 1px;
+}
+
+GtkExpander:prelight, GtkExpander:hover, expander:prelight, expander:hover {
+  background-color: @prelight_bg_color;
+}
+expander arrow {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+expander arrow:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+expander arrow:checked {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+GtkCalendar.view {
+}
+GtkCalendar.header {
+  background-color: @bg_color;
+}
+GtkCalendar.button {
+}
+GtkCalendar.highlight {
+}
+
+GtkInfoBar, infobar {
+  border-width: 1px;
+  border-style: solid;
+}
+.info {
+  background-color: @info_bg_color;
+  color: @info_fg_color;
+}
+.warning {
+  background-color: @warning_bg_color;
+  color: @warning_fg_color;
+}
+.question {
+  background-color: @question_bg_color;
+  color: @question_fg_color;
+}
+.error {
+  background-color: @error_bg_color;
+  color: @error_fg_color;
+}
+
+
+/* App-specific rule */
+.budgie-panel {
+  background-color: @bg_color;
+  color: @fg_color;
+}
+
