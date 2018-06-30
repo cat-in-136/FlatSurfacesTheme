@@ -5,9 +5,6 @@
   -GtkWindow-resize-grip-height: 0;
   -GtkWindow-resize-grip-width: 0;
 
-  -GtkWidget-link-color: @link_color;
-  -GtkWidget-visited-link-color: @visited_link_color;
-
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
 
@@ -18,12 +15,12 @@
 }
 
 *:selected,
-*:selected:focused {
+*:selected:focus {
   background-color: @selected_bg_color;
   color: @selected_fg_color;
 }
 
-*:insensitive, *:insensitive * {
+*:disabled, *:disabled * {
   color: @insensitive_fg_color;
   border-color: @insensitive_fg_color;
 }
@@ -56,11 +53,9 @@ radio {
 radio:checked {
   -gtk-icon-source: -gtk-icontheme("media-record-symbolic");
 }
-button:prelight:active, .button:prelight:active,
+button:hover:active, .button:hover:active,
 button:hover, .button:hover,
-radio:prelight, .radio:prelight,
 radio:hover, .radio:hover,
-check:prelight, .check:prelight,
 check:hover, .check:hover {
   background-color: @prelight_bg_color;
   color: @fg_color;
@@ -91,12 +86,12 @@ button:link:active, button:link:hover {
 *:link, .link, button:link > label {
   color: @link_color;
   text-decoration: underline;
-  text‑decoration‑style: solid;
+  text-decoration-style: solid;
 }
 *:visited, .link:visited, button:visited > label {
   color: @visited_link_color;
   text-decoration: underline;
-  text‑decoration‑style: solid;
+  text-decoration-style: solid;
 }
 
 GtkSwitch, switch {
@@ -116,19 +111,19 @@ GtkMenu, menu {
   border-width: 1px;
 }
 .menuitem:active, .menuitem GtkLabel:active, menuitem:active, menuitem:active > label,
-.menuitem:prelight, .menuitem GtkLabel:prelight, menuitem:prelight, menuitem:prelight > label,
+.menuitem:hover, .menuitem GtkLabel:hover, menuitem:hover, menuitem:hover > label,
 .menu:active, .menu GtkLabel:active, menu:active,
-.menu:prelight, .menu GtkLabel:prelight, menu:prelight,
-GtkTreeMenu .menuitem:prelight,
-GtkTreeMenu .menuitem *:prelight,
+.menu:hover, .menu GtkLabel:hover, menu:hover,
+GtkTreeMenu .menuitem:hover,
+GtkTreeMenu .menuitem *:hover,
 GtkTreeMenu .menuitem:active,
 GtkTreeMenu .menuitem *:active,
-.popover GtkModelButton.button:prelight,
-.popover GtkModelButton.button *:prelight,
+.popover GtkModelButton.button:hover,
+.popover GtkModelButton.button *:hover,
 .popover GtkModelButton.button:active,
 .popover GtkModelButton.button *:active,
-popover modelbutton:prelight,
-popover modelbutton *:prelight,
+popover modelbutton:hover,
+popover modelbutton *:hover,
 popover modelbutton:active,
 popover modelbutton *:active {
   background-color: @selected_bg_color;
@@ -146,20 +141,20 @@ menuitem arrow {
 menuitem arrow:dir(rtl) {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
-.menuitem.check:active, menuitem check:active, 
+.menuitem.check:active, menuitem check:active,
 .menuitem.radio:active, menuitem radio:active {
   background-color: @bg_color;
   color: @fg_color;
 }
-.menuitem.check:prelight, .menuitem.check:hover, menuitem check:prelight, menuitem check:hover,
-.menuitem.radio:prelight, .menuitem.radio:hover, menuitem radio:prelight, menuitem radio:hover {
+.menuitem.check:hover, menuitem check:hover,
+.menuitem.radio:hover, menuitem radio:hover {
   background-color: @selected_bg_color;
   color: @selected_fg_color;
   border-color: @selected_fg_color;
 }
-.menuitem:insensitive, .menuitem GtkLabel:insensitive, menuitem:insensitive,
-.menu:insensitive, .menu GtkLabel:insensitive, menu:insensitive,
-GtkTreeMenu:insensitive {
+.menuitem:disabled, .menuitem GtkLabel:disabled, menuitem:disabled,
+.menu:disabled, .menu GtkLabel:disabled, menu:disabled,
+GtkTreeMenu:disabled {
   color: @insensitive_fg_color;
 }
 
@@ -177,9 +172,9 @@ GtkStatusbar, statusbar, GtkStatusbar *, statusbar *,
   border-style: solid;
 }
 
-.toolbar .button, toolbar button, .toolbar .button:insensitive, toolbar button:insensitive,
-actionbar button, actionbar button:insensitive,
-.header-bar .button, headerbar button, .header-bar .button:insensitive, headerbar button:insensitive {
+.toolbar .button, toolbar button, .toolbar .button:disabled, toolbar button:disabled,
+actionbar button, actionbar button:disabled,
+.header-bar .button, headerbar button, .header-bar .button:disabled, headerbar button:disabled {
   border-color: transparent;
 }
 
@@ -202,8 +197,8 @@ actionbar button, actionbar button:insensitive,
   background-color: @base_color;
   color: @text_color;
 }
-.view:insensitive, iconview:insensitive, textview:insensitive,
-list:insensitive, treeview:insensitive {
+.view:disabled, iconview:disabled, textview:disabled,
+list:disabled, treeview:disabled {
   background-color: @bg_color;
 }
 
@@ -228,8 +223,6 @@ combobox arrow {
 }
 
 .scrollbar, scrollbar {
-  -GtkRange-trough-border: 0;
-
   padding: 0;
   background-color: mix(@fg_color, @bg_color, 0.8);
   border-width: 1px;
@@ -295,7 +288,7 @@ scale.vertical trough > highlight, scale.vertical trough > fill {
   min-height: 1px;
 }
 
-.scrollbar:insensitive, scrollbar:insensitive,
+.scrollbar:disabled, scrollbar:disabled,
 GtkScale.entry {
   color: mix(@fg_color, @base_color, 0.5);
   border-color: mix(@fg_color, @base_color, 0.5);
@@ -309,14 +302,8 @@ GtkScale.entry {
   background-color: @bg_color;
   color: @fg_color;
 }
-.scrollbar.slider.horizontal, .horizontal slider {
-  height: 100%;
-}
-.scrollbar.slider.vertical, .vertical slider {
-  width: 100%;
-}
-.scrollbar.slider:hover, slider:hover, .scrollbar.slider:prelight, slider:prelight,
-GtkSwitch:prelight, switch:prelight > slider, GtkSwitch:hover, switch:hover > slider {
+.scrollbar.slider:hover, slider:hover,
+GtkSwitch:hover, switch:hover > slider {
   background-color: @prelight_bg_color;
   color: @prelight_fg_color;
 }
@@ -381,14 +368,12 @@ GtkProgressBar.progressbar, progressbar progress,
   background-color: @bg_color;
 }
 .paned:hover, paned:hover,
-.paned:prelight, paned:prelight,
 .paned:selected, paned:selected {
   background-color: @fg_color;
 }
 
 .pane-separator, paned separator,
 .pane-separator:hover, paned separator:hover,
-.pane-separator:prelight, paned separator:prelight,
 .pane-separator:selected, paned separator:selected {
   background-color: @fg_color;
 }
@@ -440,7 +425,7 @@ column-header:first-child .button {
   border-width: 1px 1px 1px 1px;
 }
 
-GtkExpander:prelight, GtkExpander:hover, expander:prelight, expander:hover {
+GtkExpander:hover, expander:hover {
   background-color: @prelight_bg_color;
 }
 expander arrow {
