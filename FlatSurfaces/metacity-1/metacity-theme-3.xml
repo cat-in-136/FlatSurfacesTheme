@@ -56,10 +56,12 @@
     <!-- do nothing -->
   </draw_ops>
   <draw_ops name="titlebar_focused">
-    <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="gtk:fg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="gtk:bg[NORMAL]" x="1" y="1" width="width-2" height="height-1" filled="true"/>
   </draw_ops>
   <draw_ops name="titlebar_unfocused">
-    <rectangle color="gtk:bg[INSENSITIVE]" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="gtk:fg[INSENSITIVE]" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="gtk:bg[INSENSITIVE]" x="1" y="1" width="width-2" height="height-1" filled="true"/>
   </draw_ops>
   <draw_ops name="titlebar_max">
     <include name="titlebar_focused"/>
