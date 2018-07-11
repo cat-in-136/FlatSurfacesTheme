@@ -1,3 +1,8 @@
+* Thu Jul 12 2018 cat_in_136 - v0.5
+
+- Updated for metacity-3.26
+- Fix css for GTK+3.22
+
 * Sun Aug 06 2017 cat_in_136 - v0.4
 
 - Introduce darker theme

@@ -1,12 +1,12 @@
 FlatSurfaces Theme
 ==================
 
-a very simple, flat-surfaces looking theme.
+a very simple 2-D flat looking theme.
 
 To install, just extract the tarball to the .themes folder in your home directory.
 
-Tested in GTK+3.22, GTK+3.18, GTK+2.24, Metacity 3.12, Metacity 2.34, 
-Cinnamon 3.4, and Xfwm 4.8.                                    
+Tested in GTK+3.22, GTK+3.18, GTK+2.24, Metacity 3.26, Metacity 3.12, Metacity 2.34,
+Cinnamon 3.4, and Xfwm 4.8.
 
 
 ## Files
