@@ -8,6 +8,7 @@ To install, just extract the tarball to the .themes folder in your home director
 Tested in GTK+3.22, GTK+3.18, GTK+2.24, Metacity 3.26, Metacity 3.12, Metacity 2.34,
 Cinnamon 3.4, and Xfwm 4.8.
 
+"High Contrast" (hcengine) engine and pixbuf engine are required to use it with gtk2.
 
 ## Files
 
