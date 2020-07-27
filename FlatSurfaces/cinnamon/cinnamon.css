@@ -1139,7 +1139,10 @@ StScrollBar StButton#vhandle:hover {
 }
 .window-list-item-box:active,
 .window-list-item-box:checked,
-.window-list-item-box:focus {
+.window-list-item-box:focus,
+.window-list-item-box:active:hover,
+.window-list-item-box:checked:hover,
+.window-list-item-box:focus:hover {
     color: #1a1a1a;
     background-color: #1e90ff;
 }
