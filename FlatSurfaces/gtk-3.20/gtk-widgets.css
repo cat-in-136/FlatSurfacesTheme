@@ -110,6 +110,10 @@ GtkMenu, menu {
   border-style: solid;
   border-width: 1px;
 }
+.menuitem, menuitem,
+.menu, menu {
+  background-color: @bg_color;
+}
 .menuitem:active, .menuitem GtkLabel:active, menuitem:active, menuitem:active > label,
 .menuitem:hover, .menuitem GtkLabel:hover, menuitem:hover, menuitem:hover > label,
 .menu:active, .menu GtkLabel:active, menu:active,
