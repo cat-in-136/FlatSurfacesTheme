@@ -1,3 +1,11 @@
+* Sun Mar 12 2023 cat_in_136 - v0.8
+
+- rewrite all of gtk-3.20/gtk-widges.cs
+
+* Sat Jun 05 2021 cat_in_136 - v0.7
+
+- Set menuitem/menu background to @bg_color implicitly to fix cat-in-136/FlatSurfacesTheme#4
+
 * Sun Aug 02 2020 cat_in_136 - v0.6
 
 - Make the cinnamon theme compatible with transparent panels extension
