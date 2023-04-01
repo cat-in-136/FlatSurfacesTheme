@@ -2166,6 +2166,11 @@ calendar > grid > label.day-number.other-month {
   color: alpha(currentColor,0.3);
 }
 
+calendar > grid > label.day-name,
+  calendar > grid > label.week-number {
+  background-color: @bg_color;
+}
+
 /***********
  * Dialogs *
  ***********/
