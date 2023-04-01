@@ -375,6 +375,10 @@ row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(di
   margin: -3px -6px;
 }
 
+button.font {
+  padding: 4px;
+}
+
 button.font separator {
   background-color: transparent;
   border: none;
