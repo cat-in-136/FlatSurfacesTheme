@@ -3,6 +3,7 @@
   outline-color: alpha(currentColor, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
+  border-radius: 0;
 }
 
 *:disabled {
@@ -403,6 +404,16 @@ button.circular {
 menubutton.circular button label,
   button.circular label {
   padding: 0;
+}
+
+button.suggested-action {
+  background-color: @selected_bg_color; /* TODO */
+  color: @selected_fg_color; /* TODO */
+}
+
+button.destructive-action {
+  background-color: @error_bg_color; /* TODO */
+  color: @error_fg_color; /* TODO */
 }
 
 stacksidebar row.needs-attention > label, .stack-switcher > button.needs-attention > label,
@@ -2690,6 +2701,7 @@ shortcut > .keycap {
   border: 1px solid;
   border-color: @border_color;
   font-size: smaller;
+  box-shadow: none;
 }
 
 :not(decoration):not(window):drop(active):focus,
@@ -2815,5 +2827,20 @@ menubutton arrow.left {
 
 menubutton arrow.right {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+/***********
+ * Leaflet *
+ ***********/
+leaflet *, clamp *, clamp > list {
+  box-shadow: none;
+}
+
+clamp list > row {
+  border: 1px solid @border_color;
+}
+
+clamp list > row:not(:first-child) {
+  border-top: none;
 }
 
