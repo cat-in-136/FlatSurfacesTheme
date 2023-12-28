@@ -400,8 +400,8 @@ spinbutton.vertical button.down {
 /************** ComboBoxes * */
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-  min-height: 16px;
-  min-width: 16px;
+  min-height: 14px;
+  min-width: 14px;
 }
 
 /************ Toolbars * */
@@ -533,8 +533,8 @@ menu menuitem check:hover,
 menu menuitem arrow,
 .menu menuitem arrow,
 .context-menu menuitem arrow {
-  min-height: 16px;
-  min-width: 16px;
+  min-height: 14px;
+  min-width: 14px;
 }
 
 menu menuitem arrow:dir(ltr),
@@ -557,8 +557,8 @@ menu>arrow,
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  min-height: 16px;
-  min-width: 16px;
+  min-height: 14px;
+  min-width: 14px;
   padding: 4px;
 }
 
@@ -589,8 +589,8 @@ menuitem accelerator {
 
 menuitem check,
 menuitem radio {
-  min-height: 16px;
-  min-width: 16px;
+  min-height: 14px;
+  min-width: 14px;
 }
 
 menuitem check:dir(ltr),
