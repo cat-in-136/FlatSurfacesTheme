@@ -514,7 +514,7 @@ menu,
 menu menuitem,
 .menu menuitem,
 .context-menu menuitem {
-  padding: 4px;
+  padding: 0;
 }
 
 menu menuitem:hover,
