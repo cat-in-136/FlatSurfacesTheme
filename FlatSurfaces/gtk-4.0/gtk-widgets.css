@@ -498,6 +498,7 @@ list > row button.image-button:not(.flat), modelbutton.flat {
 modelbutton.flat {
   padding-left: 8px;
   padding-right: 8px;
+  min-height: unset;
 }
 
 modelbutton.flat arrow {
@@ -616,13 +617,13 @@ combobox arrow {
 
 dropdown > popover.background.menu > contents,
 combobox > popover.background.menu > contents {
-  padding: 4px 0;
+  padding: 0 6px;
 }
 
 dropdown > popover.menu > contents modelbutton,
 combobox > popover.menu > contents modelbutton {
   min-height: 16px;
-  padding: 5px 6px;
+  padding: 0 12px;
 }
 
 dropdown:drop(active),
@@ -1193,7 +1194,7 @@ popover.menu scale {
 }
 
 popover.menu modelbutton {
-  padding: 5px 12px;
+  padding: 5px 0;
 }
 
 popover.menu label.title {
@@ -1220,7 +1221,7 @@ menubar > item:selected {
 }
 
 menubar > item popover.menu modelbutton {
-  padding: 2px;
+  padding: 0 2px;
 }
 
 menubar > item popover.menu.background > contents {
