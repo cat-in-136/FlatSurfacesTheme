@@ -321,22 +321,22 @@ button.keyboard-activating.sidebar-button, notebook > header > tabs > arrow.keyb
 notebook > header > tabs > arrow.image-button,
   button.image-button {
   min-width: 18px;
-  padding: 4px;
+  padding: 2px;
 }
 
 notebook > header > tabs > arrow.text-button,
   button.text-button {
-  padding: 4px 16px;
+  padding: 2px;
 }
 
 notebook > header > tabs > arrow.text-button.image-button,
   button.text-button.image-button {
-  padding: 4px 7px;
+  padding: 2px;
 }
 
 notebook > header > tabs > arrow.text-button.image-button,
   button.text-button.image-button {
-  padding: 4px 7px;
+  padding: 2px;
 }
 
 notebook > header > tabs > arrow.text-button.image-button label,
