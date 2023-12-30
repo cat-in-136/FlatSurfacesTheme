@@ -63,7 +63,6 @@ gridview > child {
 
 gridview box {
   border-spacing: 8px;
-  margin: 12px;
 }
 
 coverflow cover {
@@ -754,7 +753,6 @@ windowcontrols button:hover, windowcontrols button:active {
 .titlebar:not(headerbar),
 headerbar {
   padding: 0 7px;
-  min-height: 42px;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: @border_color;
@@ -836,18 +834,15 @@ headerbar entry,
 headerbar spinbutton,
 headerbar separator:not(.sidebar),
 headerbar button {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin: unset;
 }
 
 headerbar menubutton > button {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: unset;
 }
 
 headerbar switch {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: unset;
 }
 
 .background .titlebar:backdrop, .background .titlebar {
@@ -2679,11 +2674,11 @@ cursor-handle.insertion-cursor:active:dir(ltr), cursor-handle.insertion-cursor:a
 }
 
 shortcuts-section {
-  margin: 20px;
+  margin: unset;
 }
 
 .shortcuts-search-results {
-  margin: 20px;
+  margin: unset;
   border-spacing: 24px;
 }
 
