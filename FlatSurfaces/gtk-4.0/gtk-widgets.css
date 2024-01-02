@@ -1,5 +1,7 @@
 * {
   padding: 0;
+  min-width: unset;
+  min-height: unset;
   outline-color: alpha(currentColor, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
@@ -29,6 +31,14 @@ dnd {
 
 .large-icons {
   -gtk-icon-size: 32px;
+}
+
+image:disabled {
+  -gtk-icon-filter: opacity(0.5);
+}
+
+picture:disabled {
+  opacity: 0.5;
 }
 
 .view, iconview,
@@ -238,7 +248,6 @@ button {
   border-width: 1px;
   border-style: solid;
   border-color: @border_color;
-  -gtk-icon-effect: highlight;
 }
 
 notebook>header>tabs>arrow:hover,
@@ -365,14 +374,16 @@ row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(di
   border-color: @selected_bg_color;
 }
 
+stackswitcher > button > label,
 .stack-switcher > button > label {
   padding: 0 6px;
-  margin: 0 -6px;
+  margin: 0;
 }
 
+stackswitcher > button > image,
 .stack-switcher > button > image {
   padding: 3px 6px;
-  margin: -3px -6px;
+  margin: 0;
 }
 
 button.font {
