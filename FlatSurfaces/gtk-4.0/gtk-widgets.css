@@ -616,7 +616,7 @@ combobox arrow {
 
 dropdown > popover.background.menu > contents,
 combobox > popover.background.menu > contents {
-  padding: 0 6px;
+  padding: 0;
 }
 
 dropdown > popover.menu > contents modelbutton,
