@@ -427,6 +427,7 @@ headerbar {
   color: @fg_color;
   border-width: 1px;
   border-color: @border_color;
+  min-height: 24px;
 }
 
 .titlebar:not(headerbar) .subtitle.
