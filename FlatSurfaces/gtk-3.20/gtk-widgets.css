@@ -1081,19 +1081,19 @@ levelbar block {
 }
 
 levelbar block.low {
-  background-color: @fg_color;
-  border-color: @fg_color;
+  background-color: @level_low_color;
+  border-color: @level_low_color;
 }
 
 levelbar block,
 levelbar block.high {
-  background-color: @selected_bg_color;
-  border-color: @selected_bg_color;
+  background-color: @level_high_color;
+  border-color: @level_high_color;
 }
 
 levelbar block.full {
-  background-color: @error_bg_color; /* TODO */
-  border-color: @error_bg_color; /* TODO */
+  background-color: @level_full_color;
+  border-color: @level_full_color;
 }
 
 levelbar block.empty {
