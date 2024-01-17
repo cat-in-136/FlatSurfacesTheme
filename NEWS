@@ -1,3 +1,12 @@
+* Wed Jan 17 2024 cat_in_136 - v0.8.1
+
+- make menuitem padding to zero on gtk-3.20
+- add box-shadow to popover on gtk-3.20
+- fix infobar foreground
+- introduce levelbar colors
+- set minimum height of headerbar to 24px
+
+
 * Sun Mar 12 2023 cat_in_136 - v0.8
 
 - rewrite all of gtk-3.20/gtk-widges.cs
