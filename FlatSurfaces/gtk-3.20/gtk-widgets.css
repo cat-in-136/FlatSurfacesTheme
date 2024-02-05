@@ -427,6 +427,7 @@ headerbar {
   color: @fg_color;
   border-width: 1px;
   border-color: @border_color;
+  min-height: 24px;
 }
 
 .titlebar:not(headerbar) .subtitle.
@@ -611,6 +612,7 @@ menu separator {
 popover.background {
   padding: 2px;
   background-color: @bg_color;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
 .csd popover.background,
@@ -1080,19 +1082,19 @@ levelbar block {
 }
 
 levelbar block.low {
-  background-color: @fg_color;
-  border-color: @fg_color;
+  background-color: @level_low_color;
+  border-color: @level_low_color;
 }
 
 levelbar block,
 levelbar block.high {
-  background-color: @selected_bg_color;
-  border-color: @selected_bg_color;
+  background-color: @level_high_color;
+  border-color: @level_high_color;
 }
 
 levelbar block.full {
-  background-color: @error_bg_color; /* TODO */
-  border-color: @error_bg_color; /* TODO */
+  background-color: @level_full_color;
+  border-color: @level_full_color;
 }
 
 levelbar block.empty {
