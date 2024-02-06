@@ -1846,6 +1846,7 @@ progressbar > trough.empty > progress {
 /*************
  * Level Bar *
  *************/
+/*
 levelbar.horizontal trough > block {
   min-height: 3px;
 }
@@ -1868,8 +1869,6 @@ levelbar > trough {
   background-color: @base_color;
   border: 1px solid;
   padding: 2px;
-  color: @fg_color;
-  border-color: @border_color;
 }
 
 levelbar > trough > block {
@@ -1878,23 +1877,72 @@ levelbar > trough > block {
 }
 
 levelbar > trough > block.low {
-  border-color: @fg_color;
-  background-color: @fg_color;
+  border-color: @level_low_color
+  background-color: @level_low_color;
 }
 
 levelbar > trough > block.high, levelbar > trough > block:not(.empty) {
-  border-color: @selected_bg_color;
-  background-color: @selected_bg_color;
+  border-color: @level_high_color;
+  background-color: @level_high_color;
 }
 
 levelbar > trough > block.full {
-  background-color: @error_bg_color; /* TODO */
-  border-color: @error_bg_color; /* TODO */
+  background-color: @level_high_color;
+  border-color: @level_high_color;
 }
 
 levelbar > trough > block.empty {
   background-color: transparent;
   border-color: @bg_color;
+}
+*/
+
+levelbar.horizontal trough > block {
+  min-height: 1px;
+}
+
+levelbar.horizontal.discrete trough > block {
+  margin: 0 1px;
+  min-width: 32px;
+}
+
+levelbar.vertical trough > block {
+  min-width: 1px;
+}
+
+levelbar.vertical.discrete > trough > block {
+  margin: 1px 0;
+  min-height: 32px;
+}
+
+levelbar > trough {
+  border: none;
+  padding: 3px;
+  background-color: @bg_color;
+  border: 1px solid @border_color;
+}
+
+levelbar > trough > block:not(.empty) {
+  border: 1px solid #35a854;
+  background-color: #35a854;
+}
+
+levelbar > trough > block.low {
+  border-color: @level_low_color;
+  background-color: @level_low_color;
+}
+
+levelbar > trough > block.high {
+  border-color: @level_high_color;
+  background-color: @level_high_color;
+}
+
+levelbar > trough > block.full {
+  background-color: @level_full_color;
+  border-color: @level_full_color;
+}
+
+levelbar > trough > block.empty {
 }
 
 /****************

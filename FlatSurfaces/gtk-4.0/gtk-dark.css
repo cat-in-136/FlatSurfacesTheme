@@ -13,13 +13,17 @@
 @define-color prelight_bg_color shade(@bg_color, 2.0);
 @define-color insensitive_fg_color mix(@fg_color, @base_color, 0.5);
 
-@define-color info_fg_color   #8b6914;
+@define-color info_fg_color   @fg_color;
 @define-color info_bg_color   #8b6914;
-@define-color warning_fg_color    #8b3d14;
+@define-color warning_fg_color    @fg_color;
 @define-color warning_bg_color    #8b3d14;
-@define-color question_fg_color   #0057ab;
+@define-color question_fg_color   @fg_color;
 @define-color question_bg_color   #0057ab;
-@define-color error_fg_color    #c90000;
+@define-color error_fg_color    @fg_color;
 @define-color error_bg_color    #c90000;
+@define-color level_low_color  #f57900;
+@define-color level_high_color  @selected_bg_color;
+@define-color level_full_color  #33d17a;
+@define-color transparent rgba(0, 0, 0, 0);
 
 @import url("gtk-widgets.css");
