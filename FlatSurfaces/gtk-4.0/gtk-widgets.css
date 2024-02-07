@@ -1073,8 +1073,12 @@ popover.background > arrow,
 }
 
 popover.background > contents {
-  padding: 8px;
+  padding: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+
+popover.background > contents > scrolledwindow > viewport > stack {
+  /*margin: 1px;*/ /* TODO TODO */
 }
 
 popover.background > contents > list,
@@ -1183,7 +1187,7 @@ popover.menu accelerator:dir(rtl) {
 popover.menu arrow.left,
   popover.menu radio.left,
   popover.menu check.left {
-  margin-left: -1px;
+  margin-left: 0px;
   margin-right: 7px;
 }
 
@@ -1191,7 +1195,7 @@ popover.menu arrow.right,
   popover.menu radio.right,
   popover.menu check.right {
   margin-left: 7px;
-  margin-right: -1px;
+  margin-right: 0px;
 }
 
 popover.menu scale {
@@ -1234,7 +1238,6 @@ menubar > item popover.menu.background > contents {
 }
 
 menubar > item popover.menu popover.menu {
-  margin-top: -5px;
 }
 
 /*************
