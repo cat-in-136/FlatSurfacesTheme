@@ -596,11 +596,11 @@ spinbutton:not(.vertical) button {
 }
 
 spinbutton.vertical button.up {
-  border-style: solid solid none solid;
+  border-style: none none solid none;
 }
 
 spinbutton.vertical button.down {
-  border-style: none solid solid solid;
+  border-style: solid none none none;
 }
 
 /**************
@@ -2003,10 +2003,6 @@ scrolledwindow > junction {
 }
 
 scrolledwindow > junction:dir(rtl) {
-}
-
-scrolledwindow:not(.frame) > .view {
-border: 1px solid @border_color;
 }
 
 separator {
