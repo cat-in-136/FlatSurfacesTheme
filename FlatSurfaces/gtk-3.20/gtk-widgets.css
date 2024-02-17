@@ -390,11 +390,11 @@ spinbutton:not(.vertical) button {
 }
 
 spinbutton.vertical button.up {
-  border-style: solid solid none solid;
+  border-style: none none solid none;
 }
 
 spinbutton.vertical button.down {
-  border-style: none solid solid solid;
+  border-style: solid none none none;
 }
 
 /************** ComboBoxes * */

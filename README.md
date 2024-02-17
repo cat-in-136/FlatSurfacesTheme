@@ -5,8 +5,8 @@ a very simple 2-D flat looking theme.
 
 To install, just extract the tarball to the .themes folder in your home directory.
 
-Tested in GTK+3.36, GTK+2.24, Metacity 3.36, Metacity 2.34,
-Cinnamon 4.6, Cinnamon 3.4, and Xfwm 4.8.
+Tested in GTK4+4.12,GTK+3.24, GTK+2.24, Marco 1.26, (Metacity 3.36),
+Cinnamon 6.0, and Xfwm 4.18.
 
 "High Contrast" (hcengine) engine and pixbuf engine are required to use it with gtk2.
 
