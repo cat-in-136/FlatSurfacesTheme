@@ -1,3 +1,7 @@
+* Sun Feb 18 2024 cat_in_136 - v0.9
+
+- support for gtk-4
+
 * Wed Jan 17 2024 cat_in_136 - v0.8.1
 
 - make menuitem padding to zero on gtk-3.20
